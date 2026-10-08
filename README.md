@@ -1,33 +1,16 @@
-# Array-Based Bag ADT
+# Array bag
 
-A fixed-capacity bag with duplicate items, removal, frequency counts, and union operations.
+This is my array version of a bag in C++. A bag can hold the same item more than once, and the order of the items does not matter.
 
-An educational C++ example developed from coursework, organized as a standalone project.
+I used shopping items in the example to try adding items, removing one or all copies, counting duplicates, and combining two bags. The program prints the contents as it goes so you can see what changed.
 
-## Build and run
+The array holds 20 items. If it is full, adding another item replaces the last one. Removing an item also moves the last item into its place.
 
-Requires a C++17 compiler and Make. Smoke checks also require Python 3.
+To build and run it, you need a C++17 compiler and Make. Open a terminal in this folder and run:
 
 ```sh
 make
 make run
-make check
 ```
 
-To choose a compiler: `make CXX=clang++` or `make CXX=g++`. Run `make clean` to remove build outputs.
-
-## Example
-
-The demonstration constructs two shopping bags and exercises their operations.
-
-## Structure
-
-- `src/`: source code and headers.
-- `tests/smoke.py`: representative console checks with execution timeouts.
-- `Makefile`: builds the source files together into `build/example`.
-
-## Scope
-
-Capacity is 20 items. Adding when full replaces the last stored item; order is not preserved by removal.
-
-The source retains the original exercise logic and explanatory comments. Build outputs, submission documents, and course materials are not part of this repository.
+You can also run `make check` to check the sample output. That needs Python 3. Use `make clean` if you want to remove the compiled program.
